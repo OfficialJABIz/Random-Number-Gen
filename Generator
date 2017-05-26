@@ -1,0 +1,105 @@
+#IMPORTANT: PLEASE DO NOT SHOW THE SOURCE CODE IF YOU WANT TO USE IT FOR A PASSCODE. OTHERWISE, GO AHEAD! (reminder to myself)
+#THIS WAS MADE FOR PYTHON 3.6.1! WILL NOT WORK FOR MOST PRE 3.6 VERSIONS!!!!
+#Please Note: I am a very beginner person (frist project), and as sucu, my code might be terrible. Oh well... I am sorry, Tim Peters!
+#generates random cryptographically secure (according to the python documentation for the module) numbers and outputs them
+import secrets
+import time
+import random
+import string
+from random import randint
+
+def generate_string(n):
+    prandstr = [chr(randint(1,11111)) for _ in range(n)]
+    return ''.join(prandstr)
+#number of times the loops repeat
+ii=100
+ee=100
+#number of times the input gets asked
+xd=10000
+print("Random Number Generation Starting Now:")
+time.sleep(1)
+print("If you want to change the rate of generation, just go into the code and look at the comments.")
+time.sleep(1)
+while xd>0:
+    steve=input("Do you want to do only chars, or chars and numbers? C or N?")
+    if steve is ("N"):
+        #generates a semi random string of 8 chars and a lot of numbers (semi random being that the chars always generate before or after number)
+        while ii>0:
+            #range of numbers chosen
+            myNum=secrets.randbelow(1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+            stri=secrets.choice(generate_string(100))
+            strin=secrets.choice(generate_string(100))
+            string=secrets.choice(generate_string(100))
+            strings=secrets.choice(generate_string(100))
+            ltr=secrets.choice(generate_string(100))
+            lttr=secrets.choice(generate_string(100))
+            lettr=secrets.choice(generate_string(100))
+            letter=secrets.choice(generate_string(100))
+            print(stri,strin,string,strings,myNum,ltr,lttr,lettr,letter)
+            ii=ii-1
+            #determines rate of generation (number in parenths)
+            time.sleep(0.1)
+        
+        #generates pseudo-random numbers(basically diabled for convenience)
+        #DO NOT REMOVE!!! IT MIGHT BREAK THE CODE(it once did to me)
+        time.sleep(1000000000000)
+        print("Psuedo-Random Number Generation Starting Now:")
+        time.sleep(2)
+        tt=100
+        while t>0:
+            MyNum=random.randint(0,0.10)
+            print(MyNum)
+            tt=tt-1
+            #determines rate of generation (number in parentheses)
+            time.sleep(0.1)
+
+
+    elif steve is ("C"):
+        #generates 72 char random string
+        while ee>0:
+            a=secrets.choice(generate_string(100))
+            b=secrets.choice(generate_string(100))
+            c=secrets.choice(generate_string(100))
+            d=secrets.choice(generate_string(100))
+            e=secrets.choice(generate_string(100))
+            f=secrets.choice(generate_string(100))
+            g=secrets.choice(generate_string(100))
+            h=secrets.choice(generate_string(100))
+            i=secrets.choice(generate_string(100))
+            j=secrets.choice(generate_string(100))
+            k=secrets.choice(generate_string(100))
+            l=secrets.choice(generate_string(100))
+            m=secrets.choice(generate_string(100))
+            n=secrets.choice(generate_string(100))
+            o=secrets.choice(generate_string(100))
+            p=secrets.choice(generate_string(100))
+            q=secrets.choice(generate_string(100))
+            r=secrets.choice(generate_string(100))
+            s=secrets.choice(generate_string(100))
+            t=secrets.choice(generate_string(100))
+            u=secrets.choice(generate_string(100))
+            v=secrets.choice(generate_string(100))
+            w=secrets.choice(generate_string(100))
+            x=secrets.choice(generate_string(100))
+            y=secrets.choice(generate_string(100))
+            z=secrets.choice(generate_string(100))
+            Q=secrets.choice(generate_string(100))
+            W=secrets.choice(generate_string(100))
+            E=secrets.choice(generate_string(100))
+            R=secrets.choice(generate_string(100))
+            T=secrets.choice(generate_string(100))
+            Y=secrets.choice(generate_string(100))
+            U=secrets.choice(generate_string(100))
+            I=secrets.choice(generate_string(100))
+            O=secrets.choice(generate_string(100))
+            P=secrets.choice(generate_string(100))
+            print(q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m,Q,W,E,R,T,Y,U,I,O,P)
+            ee=ee-1
+            time.sleep(0.1)
+    else:
+        #starts the process of redoing
+        print("That input does not work.")
+        time.sleep(2)
+        print("The inputs that work are C (for only ascii characters) or N (for ascii chars and numbers)")
+        xd=xd-1
+    
